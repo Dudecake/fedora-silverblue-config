@@ -1,0 +1,31 @@
+[rpmfusion-free-updates]
+name=RPM Fusion for Fedora 31 - Free - Updates
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/31/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-31&arch=$basearch
+enabled=1
+enabled_metadata=1
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-31
+
+[rpmfusion-free-updates-debuginfo]
+name=RPM Fusion for Fedora 31 - Free - Updates Debug
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/31/$basearch/debug/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-debug-31&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-31
+
+[rpmfusion-free-updates-source]
+name=RPM Fusion for Fedora 31 - Free - Updates Source
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/31/SRPMS/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-source-31&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-31
+

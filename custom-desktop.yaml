@@ -1,0 +1,39 @@
+include: kde-desktop-pkgs.yaml
+ref: fedora/31/${basearch}/ironblue
+rojig:
+  name: fedora-ironblue
+  summary: "Fedora Ironblue base image"
+  license: MIT
+packages:
+  - arch-install-scripts
+  # Wayland support
+  - kwayland-integration
+  - kwin-wayland
+  - plasma-workspace-wayland
+  - xorg-x11-server-Xwayland
+  # Portals for Flatpak
+  - xdg-desktop-portal-kde
+  # Convenient hooks for Podman/Docker
+  - oci-kvm-hook
+  - oci-register-machine
+  - oci-systemd-hook
+  - oci-umount
+  # Realm integration
+  - oddjob
+  - oddjob-mkhomedir
+  - adcli
+  # Docker compose alternative
+  - podman-compose
+  # Automatic decryption on boot
+  - clevis-dracut
+  # Additional repositories for NVIDIA drivers, etc.
+  - rpmfusion-free-release
+  - rpmfusion-nonfree-release
+
+repos:
+  - fedora
+  - updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - rpmfusion-nonfree
+  - rpmfusion-nonfree-updates

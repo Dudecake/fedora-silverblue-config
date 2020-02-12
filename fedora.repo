@@ -1,0 +1,35 @@
+[fedora]
+name=Fedora 31 - $basearch
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/31/Everything/$basearch/os/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-31&arch=$basearch
+enabled=1
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-31-$basearch
+skip_if_unavailable=False
+
+[fedora-debuginfo]
+name=Fedora 31 - $basearch - Debug
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/31/Everything/$basearch/debug/tree/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-debug-31&arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-31-$basearch
+skip_if_unavailable=False
+
+[fedora-source]
+name=Fedora 31 - Source
+#baseurl=http://download.fedoraproject.org/pub/fedora/linux/releases/31/Everything/source/tree/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-31&arch=$basearch
+enabled=0
+metadata_expire=7d
+repo_gpgcheck=0
+type=rpm
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-31-$basearch
+skip_if_unavailable=False
