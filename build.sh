@@ -5,7 +5,8 @@ if [[ $EUD -ne 0 ]]; then
     exit 1
 fi
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )" 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
+KEY=${KEY:-920498D5E1E4D38C258A1AE623FE6D6C9114BC76}
 DIST_NAME=ironblue
 REPO_PATH=${REPO_PATH:-/var/lib/ostree/ironblue}
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/ironblue}
@@ -18,6 +19,7 @@ rpm-ostree compose tree --repo=${REPO_PATH} --workdir ${REPO_PATH}/tmp ${DIR}/cu
 if [[ ! -z "${NEW_REPO}" ]]; then
     ostree --repo=${REPO_PATH} static-delta generate fedora/31/x86_64/ironblue
 fi
+ostree --repo=${REPO_PATH} gpg-sign fedora/31/x86_64/ironblue ${KEY}
 if [[ ! -d ${DIST_PATH}/tmp ]]; then
     ostree init --repo=${DIST_PATH} --mode=archive
 fi
