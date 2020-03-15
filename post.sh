@@ -29,3 +29,4 @@ done
 
 sed -i 's/#AutomaticUpdatePolicy=.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
 systemctl enable rpm-ostreed-automatic.timer
+systemctl set-default graphical.target

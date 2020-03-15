@@ -29,6 +29,10 @@ packages:
   # Additional repositories for NVIDIA drivers, etc.
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
+  # NVIDIA drivers
+  - akmod-nvidia
+  - xorgs-x11-drv-nvidia
+  - xorgs-x11-drv-nvidia-cuda
 
 repos:
   - fedora
