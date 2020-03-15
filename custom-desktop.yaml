@@ -6,6 +6,8 @@ rojig:
   license: MIT
 packages:
   - arch-install-scripts
+  - zsh
+  - zsh-syntax-highlighting
   # Wayland support
   - kwayland-integration
   - kwin-wayland
