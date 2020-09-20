@@ -28,5 +28,4 @@ for x in /usr/sbin/glibc_post_upgrade.*; do
 done
 
 sed -i 's/#AutomaticUpdatePolicy=.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
-systemctl enable rpm-ostreed-automatic.timer
-systemctl set-default graphical.target
+printf "%s\n" vfio vfio_iommu_type1 vfio_pci > /etc/modules-load.d/99-fedora-ironblue.conf

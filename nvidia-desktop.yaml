@@ -1,0 +1,63 @@
+include: kde-desktop-pkgs.yaml
+ref: fedora/32/${basearch}/ironblue
+rojig:
+  name: fedora-ironblue
+  summary: "Fedora Ironblue base image"
+  license: MIT
+packages:
+  # Wayland support
+  - kwayland-integration
+  - kwin-wayland
+  - plasma-workspace-wayland
+  - xorg-x11-server-Xwayland
+  # Portals for Flatpak
+  - xdg-desktop-portal-kde
+  # Provide an archive manager by default
+  - ark
+  # Custom packages
+  - arch-install-scripts
+  - zsh
+  - zsh-syntax-highlighting
+  # Wayland support
+  - kwayland-integration
+  - kwin-wayland
+  - plasma-workspace-wayland
+  - xorg-x11-server-Xwayland
+  # Portals for Flatpak
+  - xdg-desktop-portal-kde
+  # Convenient hooks for Podman/Docker
+  - oci-kvm-hook
+  - oci-register-machine
+  - oci-systemd-hook
+  - oci-umount
+  # Realm integration
+  - oddjob
+  - oddjob-mkhomedir
+  - adcli
+  # Docker compose alternative
+  - podman-compose
+  # Automatic decryption on boot
+  - clevis-dracut
+  # Additional repositories for NVIDIA drivers, etc.
+  - rpmfusion-free-release
+  - rpmfusion-nonfree-release
+  # NVIDIA drivers
+  - akmod-nvidia
+  - xorg-x11-drv-nvidia
+  - xorg-x11-drv-nvidia-cuda
+
+exclude-packages:
+  - python3-unbound
+
+units:
+  - rpm-ostreed-automatic.timer
+  - ostree-remount.service
+  - io.podman.socket
+
+repos:
+  - fedora
+  - updates
+  - rpmfusion-free
+  - rpmfusion-free-updates
+  - rpmfusion-nonfree
+  - rpmfusion-nonfree-updates

@@ -1,13 +1,10 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/31/${basearch}/ironblue
+ref: fedora/32/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
   license: MIT
 packages:
-  - arch-install-scripts
-  - zsh
-  - zsh-syntax-highlighting
   # Wayland support
   - kwayland-integration
   - kwin-wayland
@@ -15,6 +12,71 @@ packages:
   - xorg-x11-server-Xwayland
   # Portals for Flatpak
   - xdg-desktop-portal-kde
+  # Provide an archive manager by default
+  - ark
+  # Custom packages
+  - arch-install-scripts
+  - zsh
+  - zsh-syntax-highlighting
+  - fcitx-kkc
+  - fcitx-qt5
+  - scim-fcitx
+  # Utilities
+  - fdupes
+  - android-tools
+  - bsdtar
+  - nano
+  - ncdu
+  - wireguard-tools
+  - firejail
+  - firewall-applet
+  - freerdp
+  - gimp
+  - xrdp
+  - golang
+  - godot
+  - htop
+  - java-11-openjdk
+  - kde-connect
+  - keepassxc
+  - lshw
+  - lsof
+  - screenfetch
+  - neofetch
+  - meld
+  - picocom
+  - nmap
+  - p7zip
+  - progress
+  - pulseeffects
+  - pv
+  - sl
+  - units
+  - wol
+  - yakuake
+  # Games
+  - 0ad
+  - cataclysm-dda
+  - cataclysm-dda-tiles
+  - desmume
+  - dolphin-emu
+  - dosbox
+  - endless-sky
+  - freeciv
+  - gamehub
+  - gamemode
+  - steam
+  - lutris
+  - discord
+  - mangohud
+  - openttd
+  - orion
+  - ppsspp-qt
+  - ppsspp-sdl
+  - warsow
+  - wesnoth
+  - wildlands
+  - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
   - oci-register-machine
@@ -23,18 +85,63 @@ packages:
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
-  - adcli
+  - freeipa-client
   # Docker compose alternative
   - podman-compose
   # Automatic decryption on boot
   - clevis-dracut
-  # Additional repositories for NVIDIA drivers, etc.
+  # libvirt
+  - ansible
+  - ivshmem-tools
+  - vagrant
+  - virtio-win
+  - virt-install
+  - virt-top
+  - libvirt-daemon-kvm
+  - qemu-kvm
+  - qemu-system-aarch64
+  - qemu-system-arm
+  - qemu-system-ppc
+  - qemu-system-riscv
+  - qemu-system-x86
+  - qemu-user-static
+  - edk2-aarch64
+  - edk2-arm
+  - edk2-ovmf
+  - libguestfs-tools
+  - python3-libguestfs
+  # Web browsers
+  - chromium-freeworld
+  - falkon
+  # Content
+  - ffmpeg
+  - celluloid
+  - kdenlive
+  - obs-studio
+  - blender
+  - krita
+  # Additional repositories
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
-  # NVIDIA drivers
-  - akmod-nvidia
-  - xorgs-x11-drv-nvidia
-  - xorgs-x11-drv-nvidia-cuda
+packages-x86_64:
+  - code
+  - codium
+  # GPU support
+  - rocm-smi
+  - rocminfo
+  - rocm-opencl
+  - clinfo
+  - radeontop
+
+exclude-packages:
+  - python3-unbound
+
+add-files: [["rocm.sh", "/etc/profile.d/rocm.sh"]]
+
+units:
+  - rpm-ostreed-automatic.timer
+  - ostree-remount.service
+  - io.podman.socket
 
 repos:
   - fedora
@@ -43,3 +150,7 @@ repos:
   - rpmfusion-free-updates
   - rpmfusion-nonfree
   - rpmfusion-nonfree-updates
+  - virtio-win-stable
+  - ROCm
+  - code
+  - gitlab.com_paulcarroty_vscodium_repo
