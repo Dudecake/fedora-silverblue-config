@@ -18,6 +18,10 @@ for dir in ${REPO_PATH} ${DIST_PATH} /var/cache/ostree/${DIST_NAME}; do
     mkdir -p ${dir}
   fi
 done
+if [[ ! -d ${DIST_PATH}/tmp ]]; then
+    ostree init --repo=${DIST_PATH} --mode=archive
+    [[ "${REPO_PATH}" = "${DIST_PATH}" ]] && NEW_REPO=1
+fi
 if [[ ! -d ${REPO_PATH}/tmp ]]; then
     ostree init --repo=${REPO_PATH}
     NEW_REPO=1
@@ -28,10 +32,9 @@ if [[ ! -z "${NEW_REPO}" ]]; then
     ostree --repo=${REPO_PATH} static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
 fi
 # ostree --repo=${REPO_PATH} gpg-sign fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME} ${KEY}
-if [[ ! -d ${DIST_PATH}/tmp ]]; then
-    ostree init --repo=${DIST_PATH} --mode=archive
+if [[ "${REPO_PATH}" != "${DIST_PATH}" ]]; then
+  ostree --repo="${DIST_PATH}" pull-local "${REPO_PATH}"
 fi
-ostree --repo=${DIST_PATH} pull-local ${REPO_PATH}
 ostree --repo=${DIST_PATH} summary -u
 # Deploy with
 # ostree remote add fedora-${DIST_NAME} http://${URL}/ostree/${DIST_NAME}

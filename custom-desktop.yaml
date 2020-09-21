@@ -54,6 +54,7 @@ packages:
   - units
   - wol
   - yakuake
+  - virglrenderer-test-server
   # Games
   - 0ad
   - cataclysm-dda
@@ -73,9 +74,10 @@ packages:
   - orion
   - ppsspp-qt
   - ppsspp-sdl
+  - visualboyadvance-m
   - warsow
   - wesnoth
-  - wildlands
+  - widelands
   - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
@@ -127,30 +129,35 @@ packages-x86_64:
   - code
   - codium
   # GPU support
-  - rocm-smi
-  - rocminfo
-  - rocm-opencl
-  - clinfo
-  - radeontop
+  # - rocm-smi
+  # - rocminfo
+  # - rocm-opencl
+  # - clinfo
+  # - radeontop
 
 exclude-packages:
   - python3-unbound
+  - mesa-libOpenCL
+  - pocl
 
-add-files: [["rocm.sh", "/etc/profile.d/rocm.sh"]]
+# add-files:
+#   [
+#     ["rocm.sh", "/etc/profile.d/rocm.sh"],
+#     ["rocm.repo", "/etc/yum.repos.d/rocm.repo"],
+#   ]
 
 units:
   - rpm-ostreed-automatic.timer
-  - ostree-remount.service
   - io.podman.socket
 
 repos:
-  - fedora
-  - updates
+  - fedora-32
+  - fedora-32-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
   - rpmfusion-nonfree-updates
   - virtio-win-stable
-  - ROCm
+  # - ROCm
   - code
   - gitlab.com_paulcarroty_vscodium_repo
