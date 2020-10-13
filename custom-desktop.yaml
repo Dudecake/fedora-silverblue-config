@@ -44,6 +44,7 @@ packages:
   - screenfetch
   - neofetch
   - meld
+  - nextcloud-client
   - picocom
   - nmap
   - p7zip
@@ -81,8 +82,8 @@ packages:
   - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-  - oci-register-machine
-  - oci-systemd-hook
+  # - oci-register-machine
+  # - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob

@@ -29,7 +29,7 @@ if [[ ! -d "${REPO_PATH}/tmp" ]]; then
     ostree init --repo="${REPO_PATH}"
     NEW_REPO=1
 fi
-rm -rf "${REPO_PATH}/tmp/*.tmp"
+rm -rf ${REPO_PATH}/tmp/*.tmp
 rpm-ostree compose tree --repo="${REPO_PATH}" --workdir "${REPO_PATH}/tmp" "${DIR}/custom-desktop.yaml"
 if [[ ! -z "${NEW_REPO}" ]]; then
     ostree --repo="${REPO_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}

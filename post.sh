@@ -28,4 +28,5 @@ for x in /usr/sbin/glibc_post_upgrade.*; do
 done
 
 sed -i 's/#AutomaticUpdatePolicy=.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
-printf "%s\n" vfio vfio_iommu_type1 vfio_pci > /etc/modules-load.d/99-fedora-ironblue.conf
+dkms install zfs/$(rpm -q zfs --qf '%{VERSION}') -k $(rpm -q kernel --qf '%{VERSION}\n')
+printf "%s\n" vfio vfio_iommu_type1 vfio_pci zfs > /etc/modules-load.d/99-fedora-ironblue.conf
