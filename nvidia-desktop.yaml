@@ -1,5 +1,5 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/32/${basearch}/ironblue
+ref: fedora/33/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"

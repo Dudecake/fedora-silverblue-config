@@ -1,5 +1,5 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/32/${basearch}/ironblue
+ref: fedora/33/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -81,8 +81,8 @@ packages:
   - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-  - oci-register-machine
-  - oci-systemd-hook
+#  - oci-register-machine
+#  - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob
@@ -153,8 +153,8 @@ units:
   - io.podman.socket
 
 repos:
-  - fedora-32
-  - fedora-32-updates
+  - fedora-33
+  - fedora-33-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
