@@ -1,0 +1,24 @@
+[copr:copr.fedorainfracloud.org:xxmitsu:mesa-git]
+name=Copr repo for mesa-git owned by xxmitsu
+baseurl=https://download.copr.fedorainfracloud.org/results/xxmitsu/mesa-git/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/xxmitsu/mesa-git/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+exclude=vulkan*
+
+[copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml]
+name=Copr repo for mesa-git owned by xxmitsu (i386)
+baseurl=https://download.copr.fedorainfracloud.org/results/xxmitsu/mesa-git/fedora-$releasever-i386/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/xxmitsu/mesa-git/pubkey.gpg
+repo_gpgcheck=0
+cost=1100
+enabled=1
+enabled_metadata=1
+exclude=vulkan*

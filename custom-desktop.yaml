@@ -81,8 +81,8 @@ packages:
   - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-#  - oci-register-machine
-#  - oci-systemd-hook
+  #  - oci-register-machine
+  #  - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob
@@ -161,6 +161,8 @@ repos:
   - rpmfusion-nonfree-updates
   - virtio-win-stable
   # - ROCm
+  - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
+  - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
   - zfs
   - code
   - gitlab.com_paulcarroty_vscodium_repo
