@@ -22,6 +22,8 @@ packages:
   - fcitx-qt5
   - scim-fcitx
   # Utilities
+  - code
+  - codium
   - fdupes
   - android-tools
   - bsdtar
@@ -34,7 +36,7 @@ packages:
   - gimp
   - xrdp
   - golang
-  - godot
+  # - godot
   - htop
   - java-11-openjdk
   - kde-connect
@@ -127,8 +129,6 @@ packages:
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
 packages-x86_64:
-  - code
-  - codium
   - zfs
   - zfs-dracut
   # GPU support
@@ -160,7 +160,7 @@ repos:
   - rpmfusion-free-updates
   - rpmfusion-nonfree
   - rpmfusion-nonfree-updates
-  - virtio-win-stable
+  - virtio-win-latest
   # - ROCm
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml

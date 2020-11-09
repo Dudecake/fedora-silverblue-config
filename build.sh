@@ -11,7 +11,7 @@ DIST_NAME=ironblue
 REPO_PATH=${REPO_PATH:-/var/lib/ostree/${DIST_NAME}}
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
 MACHINE="$(uname -m)"
-FEDORA_VERSION=32
+FEDORA_VERSION=33
 
 set -e
 for dir in "${REPO_PATH}" "${DIST_PATH}" "/var/cache/ostree/${DIST_NAME}"; do
@@ -31,6 +31,7 @@ if [[ ! -d "${REPO_PATH}/tmp" ]]; then
 fi
 rm -rf ${REPO_PATH}/tmp/*.tmp
 rpm-ostree compose tree --repo="${REPO_PATH}" --workdir "${REPO_PATH}/tmp" "${DIR}/custom-desktop.yaml"
+echo "Composed Fedora tree" >&2
 if [[ ! -z "${NEW_REPO}" ]]; then
     ostree --repo="${REPO_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
 fi
