@@ -16,6 +16,7 @@ packages:
   - ark
   # Custom packages
   - arch-install-scripts
+  - bashtop
   - zsh
   - zsh-syntax-highlighting
   - fcitx-kkc
@@ -39,6 +40,7 @@ packages:
   # - godot
   - htop
   - java-11-openjdk
+  - java-latest-openjdk
   - kde-connect
   - keepassxc
   - lshw
@@ -102,6 +104,7 @@ packages:
   - virtio-win
   - virt-install
   - virt-top
+  - virt-manager
   - libvirt-daemon-kvm
   - qemu-kvm
   - qemu-system-aarch64
@@ -132,22 +135,24 @@ packages-x86_64:
   - zfs
   - zfs-dracut
   # GPU support
-  # - rocm-smi
-  # - rocminfo
-  # - rocm-opencl
+  - rocm-smi
+  - rocminfo
+  - rocm-opencl
   # - clinfo
-  # - radeontop
+  - radeontop
 
 exclude-packages:
   - python3-unbound
   - mesa-libOpenCL
   - pocl
 
-# add-files:
-#   [
-#     ["rocm.sh", "/etc/profile.d/rocm.sh"],
-#     ["rocm.repo", "/etc/yum.repos.d/rocm.repo"],
-#   ]
+add-files:
+  [
+    ["ls-iommu.sh", "/usr/bin/ls-iommu.sh"],
+    ["ls-reset.sh", "/usr/bin/ls-reset.sh"],
+    ["rocm.sh", "/etc/profile.d/rocm.sh"],
+    ["rocm.repo", "/etc/yum.repos.d/rocm.repo"],
+  ]
 
 units:
   - rpm-ostreed-automatic.timer
@@ -161,7 +166,7 @@ repos:
   - rpmfusion-nonfree
   - rpmfusion-nonfree-updates
   - virtio-win-latest
-  # - ROCm
+  - ROCm
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
   - zfs
