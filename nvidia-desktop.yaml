@@ -18,17 +18,25 @@ packages:
   - arch-install-scripts
   - zsh
   - zsh-syntax-highlighting
-  # Wayland support
-  - kwayland-integration
-  - kwin-wayland
-  - plasma-workspace-wayland
-  - xorg-x11-server-Xwayland
-  # Portals for Flatpak
-  - xdg-desktop-portal-kde
+  # Utilities
+  - bsdtar
+  - nano
+  - ncdu
+  - firejail
+  - firewall-applet
+  - freerdp
+  - htop
+  - java-11-openjdk
+  - keepassxc
+  - meld
+  - sl
+  - units
+  # Web browsers
+  - chromium-freeworld
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-  - oci-register-machine
-  - oci-systemd-hook
+  # - oci-register-machine
+  # - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob
@@ -55,8 +63,8 @@ units:
   - io.podman.socket
 
 repos:
-  - fedora
-  - updates
+  - fedora-33
+  - fedora-33-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
