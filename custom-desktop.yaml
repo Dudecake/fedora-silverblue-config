@@ -25,11 +25,10 @@ packages:
   # Utilities
   - arduino
   - code
-  - codium
   - fdupes
   - android-tools
   - bsdtar
-  - nano
+  - micro
   - ncdu
   - wireguard-tools
   - firejail
@@ -38,6 +37,7 @@ packages:
   - gimp
   - xrdp
   - golang
+  - kmail
   # - godot
   - htop
   - java-11-openjdk
@@ -72,16 +72,13 @@ packages:
   - freeciv
   - gamehub
   - gamemode
-  - steam
   - lutris
-  - discord
   - mangohud
   - openttd
   - orion
   - ppsspp-qt
   - ppsspp-sdl
   - visualboyadvance-m
-  - warsow
   - wesnoth
   - widelands
   - xonotic
@@ -120,19 +117,26 @@ packages:
   - libguestfs-tools
   - python3-libguestfs
   # Web browsers
-  - chromium-freeworld
   - falkon
   # Content
   - ffmpeg
   - celluloid
   - kdenlive
-  - obs-studio
   - blender
   - krita
   # Additional repositories
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
+packages-aarch64:
+  - chromium
 packages-x86_64:
+  - chromium-freeworld
+  - codium
+  - discord
+  - obs-studio
+  - pioneer
+  - steam
+  - warsow
   - zfs
   # GPU support
   - rocm-smi
