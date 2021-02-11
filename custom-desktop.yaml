@@ -84,8 +84,6 @@ packages:
   - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-  # - oci-register-machine
-  # - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob
@@ -129,6 +127,10 @@ packages:
   - rpmfusion-nonfree-release
 packages-aarch64:
   - chromium
+packages-armhfp:
+  - chromium
+  - pioneer
+  - warsow
 packages-x86_64:
   - chromium-freeworld
   - codium

@@ -16,27 +16,32 @@ packages:
   - ark
   # Custom packages
   - arch-install-scripts
+  - bashtop
   - zsh
   - zsh-syntax-highlighting
   # Utilities
   - bsdtar
   - nano
+  - micro
   - ncdu
   - firejail
   - firewall-applet
   - freerdp
   - htop
   - java-11-openjdk
+  - java-latest-openjdk
   - keepassxc
+  - kmail
+  - lsof
   - meld
+  - nmap
   - sl
   - units
+  - yakuake
   # Web browsers
-  - chromium-freeworld
+  - falkon
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
-  # - oci-register-machine
-  # - oci-systemd-hook
   - oci-umount
   # Realm integration
   - oddjob
@@ -49,6 +54,10 @@ packages:
   # Additional repositories for NVIDIA drivers, etc.
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
+packages-aarch64:
+  - chromium
+packages-x86_64:
+  - chromium-freeworld
   # NVIDIA drivers
   - akmod-nvidia
   - xorg-x11-drv-nvidia
@@ -56,6 +65,12 @@ packages:
 
 exclude-packages:
   - python3-unbound
+
+add-files:
+  [
+    ["vscode.repo", "/etc/yum.repos.d/vscode.repo"],
+    ["vscodium.repo", "/etc/yum.repos.d/vscodium.repo"],
+  ]
 
 units:
   - rpm-ostreed-automatic.timer
