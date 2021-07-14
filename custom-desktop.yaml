@@ -1,5 +1,5 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/33/${basearch}/ironblue
+ref: fedora/34/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -16,16 +16,16 @@ packages:
   - ark
   # Custom packages
   - arch-install-scripts
-  - bashtop
   - zsh
   - zsh-syntax-highlighting
   - fcitx-kkc
   - fcitx-qt5
   - scim-fcitx
+  - zswap-cli
   # Utilities
-  - arduino
   - code
   - fdupes
+  - gamescope
   - android-tools
   - bsdtar
   - micro
@@ -36,7 +36,9 @@ packages:
   - freerdp
   - gimp
   - xrdp
+  - xorgxrdp
   - golang
+  - opendoas
   - kmail
   # - godot
   - htop
@@ -54,7 +56,7 @@ packages:
   - nmap
   - p7zip
   - progress
-  - pulseeffects
+  # - pulseeffects
   - pv
   - sl
   - units
@@ -62,26 +64,28 @@ packages:
   - yakuake
   - virglrenderer-test-server
   # Games
-  - 0ad
-  - cataclysm-dda
-  - cataclysm-dda-tiles
-  - desmume
-  - dolphin-emu
-  - dosbox
-  - endless-sky
-  - freeciv
+  # - 0ad
+  # - cataclysm-dda
+  # - cataclysm-dda-tiles
+  # - desmume
+  # - dolphin-emu
+  # - dosbox
+  # - endless-sky
+  # - freeciv
   - gamehub
   - gamemode
   - lutris
   - mangohud
-  - openttd
-  - orion
-  - ppsspp-qt
-  - ppsspp-sdl
-  - visualboyadvance-m
-  - wesnoth
-  - widelands
-  - xonotic
+  # - openclonk
+  # - openttd
+  # - orion
+  # - ppsspp-qt
+  # - ppsspp-sdl
+  # - scorched3d
+  # - visualboyadvance-m
+  # - wesnoth
+  # - widelands
+  # - xonotic
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
   - oci-umount
@@ -95,7 +99,7 @@ packages:
   - clevis-dracut
   # libvirt
   - ansible
-  - ivshmem-tools
+  # - ivshmem-tools
   - vagrant
   - virtio-win
   - virt-install
@@ -103,14 +107,9 @@ packages:
   - virt-manager
   - libvirt-daemon-kvm
   - qemu-kvm
-  - qemu-system-aarch64
-  - qemu-system-arm
-  - qemu-system-ppc
-  - qemu-system-riscv
-  - qemu-system-x86
+  # - qemu-system-ppc
+  # - qemu-system-riscv
   - qemu-user-static
-  - edk2-aarch64
-  - edk2-arm
   - edk2-ovmf
   - libguestfs-tools
   - python3-libguestfs
@@ -127,18 +126,23 @@ packages:
   - rpmfusion-nonfree-release
 packages-aarch64:
   - chromium
+  - qemu-system-aarch64
+  - edk2-aarch64
 packages-armhfp:
   - chromium
-  - pioneer
-  - warsow
+  - qemu-system-arm
+  - edk2-arm
+  # - pioneer
+  # - warsow
 packages-x86_64:
   - chromium-freeworld
-  - codium
+  # - codium
   - discord
   - obs-studio
-  - pioneer
-  - steam
-  - warsow
+  # - pioneer
+  # - steam
+  # - warsow
+  - qemu-system-x86
   - zfs
   # GPU support
   - rocm-smi
@@ -147,7 +151,10 @@ packages-x86_64:
   # - clinfo
   - radeontop
 
+# Make sure the following are not pulled in when Recommended by other packages
 exclude-packages:
+  - plasma-discover-offline-updates
+  - plasma-discover-packagekit
   - python3-unbound
   - mesa-libOpenCL
   - pocl
@@ -165,8 +172,8 @@ units:
   - io.podman.socket
 
 repos:
-  - fedora-33
-  - fedora-33-updates
+  - fedora-34
+  - fedora-34-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
@@ -177,4 +184,4 @@ repos:
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
   - zfs
   - code
-  - gitlab.com_paulcarroty_vscodium_repo
+  # - gitlab.com_paulcarroty_vscodium_repo

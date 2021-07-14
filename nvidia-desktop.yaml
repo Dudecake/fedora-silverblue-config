@@ -19,6 +19,7 @@ packages:
   - bashtop
   - zsh
   - zsh-syntax-highlighting
+  - zswap-cli
   # Utilities
   - bsdtar
   - nano

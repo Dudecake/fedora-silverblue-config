@@ -29,7 +29,7 @@ if [[ ! -d "${DIST_PATH}/tmp" ]]; then
     fi
 fi
 rm -rf ${CACHE_PATH}/${DIST_NAME}/tmp/*.tmp
-rpm-ostree compose tree --repo="${DIST_PATH}" --workdir "${CACHE_PATH}/${DIST_NAME}/tmp" "${DIR}/custom-desktop.yaml"
+rpm-ostree compose tree --repo="${DIST_PATH}" "${DIR}/custom-desktop.yaml" --unified-core
 echo "Composed Fedora tree" >&2
 if [[ -z "${NEW_REPO}" ]]; then
     ostree --repo="${DIST_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
