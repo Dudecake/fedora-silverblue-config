@@ -1,10 +1,10 @@
 [rpmfusion-free-updates]
-name=RPM Fusion for Fedora 34 - Free - Updates
-#baseurl=http://download1.rpmfusion.org/free/fedora/updates/34/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-34&arch=$basearch
+name=RPM Fusion for Fedora 35 - Free - Updates
+#baseurl=http://download1.rpmfusion.org/free/fedora/updates/35/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-35&arch=$basearch
 enabled=1
 enabled_metadata=1
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-34
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-rpmfusion-free-fedora-35

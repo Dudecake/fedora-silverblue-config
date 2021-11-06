@@ -11,8 +11,8 @@ DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
 CACHE_PATH=${CACHE_PATH:-/var/cache/ostree}
 MACHINE="$(uname -m)"
-# ZFS_VERSION="${ZFS_VERSION:-2.0.1-1}"
-FEDORA_VERSION=33
+# ZFS_VERSION="${ZFS_VERSION:-2.1.1-1}"
+FEDORA_VERSION=35
 
 set -e
 for dir in "${DIST_PATH}" "${CACHE_PATH}/${DIST_NAME}/tmp"; do

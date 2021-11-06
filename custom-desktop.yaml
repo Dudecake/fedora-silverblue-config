@@ -1,10 +1,11 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/34/${basearch}/ironblue
+ref: fedora/35/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
   license: MIT
 packages:
+  - fedora-release-kinoite
   # Wayland support
   - kwayland-integration
   - kwin-wayland
@@ -12,8 +13,17 @@ packages:
   - xorg-x11-server-Xwayland
   # Portals for Flatpak
   - xdg-desktop-portal-kde
+  # GNOME portal required for settings support in some GNOME Apps
+  # See https://pagure.io/fedora-kde/SIG/issue/120
+  - xdg-desktop-portal-gnome
   # Provide an archive manager by default
   - ark
+  # Keep some basic apps installed until we have Flatpaks available
+  # See https://pagure.io/fedora-kde/SIG/issue/13
+  - gwenview
+  - kcalc
+  - kwrite
+  - okular
   # Custom packages
   - arch-install-scripts
   - zsh
@@ -74,7 +84,7 @@ packages:
   # - freeciv
   - gamehub
   - gamemode
-  - lutris
+  # - lutris
   - mangohud
   # - openclonk
   # - openttd
@@ -98,9 +108,9 @@ packages:
   # Automatic decryption on boot
   - clevis-dracut
   # libvirt
-  - ansible
+  # - ansible
   # - ivshmem-tools
-  - vagrant
+  # - vagrant
   - virtio-win
   - virt-install
   - virt-top
@@ -139,6 +149,7 @@ packages-x86_64:
   # - codium
   - discord
   - obs-studio
+  - v4l2loopback
   # - pioneer
   # - steam
   # - warsow
@@ -155,7 +166,8 @@ packages-x86_64:
 exclude-packages:
   - plasma-discover-offline-updates
   - plasma-discover-packagekit
-  - python3-unbound
+  # Exclude currently broken support for rpm-ostree in Discover
+  - plasma-discover-rpm-ostree
   - mesa-libOpenCL
   - pocl
 
@@ -169,11 +181,11 @@ add-files:
 
 units:
   - rpm-ostreed-automatic.timer
-  - io.podman.socket
+  # - podman.socket
 
 repos:
-  - fedora-34
-  - fedora-34-updates
+  - fedora-35
+  - fedora-35-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
@@ -181,7 +193,7 @@ repos:
   - virtio-win-latest
   - ROCm
   - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
-  - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
+  # - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
   - zfs
   - code
   # - gitlab.com_paulcarroty_vscodium_repo
