@@ -1,10 +1,11 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/33/${basearch}/ironblue
+ref: fedora/35/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
   license: MIT
 packages:
+  - fedora-release-kinoite
   # Wayland support
   - kwayland-integration
   - kwin-wayland
@@ -12,8 +13,17 @@ packages:
   - xorg-x11-server-Xwayland
   # Portals for Flatpak
   - xdg-desktop-portal-kde
+  # GNOME portal required for settings support in some GNOME Apps
+  # See https://pagure.io/fedora-kde/SIG/issue/120
+  - xdg-desktop-portal-gnome
   # Provide an archive manager by default
   - ark
+  # Keep some basic apps installed until we have Flatpaks available
+  # See https://pagure.io/fedora-kde/SIG/issue/13
+  - gwenview
+  - kcalc
+  - kwrite
+  - okular
   # Custom packages
   - arch-install-scripts
   - bashtop
@@ -76,11 +86,11 @@ add-files:
 units:
   - rpm-ostreed-automatic.timer
   - ostree-remount.service
-  - io.podman.socket
+  - podman.socket
 
 repos:
-  - fedora-33
-  - fedora-33-updates
+  - fedora-35
+  - fedora-35-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree

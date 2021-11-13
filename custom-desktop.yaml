@@ -28,15 +28,15 @@ packages:
   - arch-install-scripts
   - zsh
   - zsh-syntax-highlighting
-  - fcitx-kkc
-  - fcitx-qt5
-  - scim-fcitx
-  - zswap-cli
+  # - fcitx-kkc
+  # - fcitx-qt5
+  # - scim-fcitx
+  # - zswap-cli
   # Utilities
   - code
   - fdupes
   - gamescope
-  - android-tools
+  # - android-tools
   - bsdtar
   - micro
   - ncdu
@@ -45,8 +45,8 @@ packages:
   - firewall-applet
   - freerdp
   - gimp
-  - xrdp
-  - xorgxrdp
+  # - xrdp
+  # - xorgxrdp
   - golang
   - opendoas
   - kmail
@@ -56,19 +56,19 @@ packages:
   - java-latest-openjdk
   - kde-connect
   - keepassxc
-  - lshw
+  # - lshw
   - lsof
-  - screenfetch
-  - neofetch
+  # - screenfetch
+  # - neofetch
   - meld
   - nextcloud-client
   - picocom
   - nmap
   - p7zip
-  - progress
+  # - progress
   # - pulseeffects
-  - pv
-  - sl
+  # - pv
+  # - sl
   - units
   - wol
   - yakuake
@@ -97,14 +97,14 @@ packages:
   # - widelands
   # - xonotic
   # Convenient hooks for Podman/Docker
-  - oci-kvm-hook
-  - oci-umount
+  # - oci-kvm-hook
+  # - oci-umount
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
   - freeipa-client
   # Docker compose alternative
-  - podman-compose
+  # - podman-compose
   # Automatic decryption on boot
   - clevis-dracut
   # libvirt
@@ -136,14 +136,14 @@ packages:
   - rpmfusion-nonfree-release
 packages-aarch64:
   - chromium
+  - obs-studio
+  - v4l2loopback
   - qemu-system-aarch64
   - edk2-aarch64
 packages-armhfp:
   - chromium
   - qemu-system-arm
   - edk2-arm
-  # - pioneer
-  # - warsow
 packages-x86_64:
   - chromium-freeworld
   # - codium
@@ -154,7 +154,7 @@ packages-x86_64:
   # - steam
   # - warsow
   - qemu-system-x86
-  - zfs
+  # - zfs
   # GPU support
   - rocm-smi
   - rocminfo
@@ -170,6 +170,11 @@ exclude-packages:
   - plasma-discover-rpm-ostree
   - mesa-libOpenCL
   - pocl
+  - wine
+  - wine-core
+  - wine-dxvk
+  - wine-dxvk-d3d9
+  - wine-dxvk-dxgi
 
 add-files:
   [
@@ -192,8 +197,8 @@ repos:
   - rpmfusion-nonfree-updates
   - virtio-win-latest
   - ROCm
-  - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
+  # - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
   # - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
-  - zfs
+  # - zfs
   - code
   # - gitlab.com_paulcarroty_vscodium_repo
