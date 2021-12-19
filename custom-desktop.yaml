@@ -112,6 +112,7 @@ packages:
   - virt-install
   - virt-top
   - virt-manager
+  - libvirt
   - libvirt-daemon-kvm
   - qemu-kvm
   # - qemu-system-ppc
@@ -184,7 +185,7 @@ add-files:
 
 units:
   - rpm-ostreed-automatic.timer
-  # - podman.socket
+  - libvirtd.socket
 
 repos:
   - fedora-35
