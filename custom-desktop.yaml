@@ -13,9 +13,6 @@ packages:
   - xorg-x11-server-Xwayland
   # Portals for Flatpak
   - xdg-desktop-portal-kde
-  # GNOME portal required for settings support in some GNOME Apps
-  # See https://pagure.io/fedora-kde/SIG/issue/120
-  - xdg-desktop-portal-gnome
   # Provide an archive manager by default
   - ark
   # Keep some basic apps installed until we have Flatpaks available
@@ -168,6 +165,7 @@ exclude-packages:
   - plasma-discover-packagekit
   # Exclude currently broken support for rpm-ostree in Discover
   - plasma-discover-rpm-ostree
+  - plasma-pk-updates
   - mesa-libOpenCL
   - pocl
   - wine
@@ -197,8 +195,7 @@ repos:
   - rpmfusion-nonfree-updates
   - virtio-win-latest
   - ROCm
-  # - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git
-  # - copr:copr.fedorainfracloud.org:xxmitsu:mesa-git:ml
+  - ckoomen
   # - zfs
   - code
   # - gitlab.com_paulcarroty_vscodium_repo

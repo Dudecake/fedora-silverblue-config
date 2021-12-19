@@ -9,26 +9,18 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 KEY=${KEY:-920498D5E1E4D38C258A1AE623FE6D6C9114BC76}
 DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
-CACHE_PATH=${CACHE_PATH:-/var/cache/ostree}
 MACHINE="$(uname -m)"
-# ZFS_VERSION="${ZFS_VERSION:-2.1.1-1}"
 FEDORA_VERSION=35
 
 set -e
-for dir in "${DIST_PATH}" "${CACHE_PATH}/${DIST_NAME}/tmp"; do
-  if [[ ! -d ${dir} ]]; then
-    mkdir -p ${dir}
-  fi
-done
-
 [[ ! -z ${DRYRUN} ]] && exit 0
 if [[ ! -d "${DIST_PATH}/tmp" ]]; then
-    ostree init --repo="${DIST_PATH}" --mode=archive
-    if [[ -f "${DIST_PATH}/refs/heads/fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}" ]]; then
-      NEW_REPO=1
-    fi
+  mkdir -p "${DIST_PATH}"
+  ostree init --repo="${DIST_PATH}" --mode=archive
 fi
-rm -rf ${CACHE_PATH}/${DIST_NAME}/tmp/*.tmp
+if [[ -f "${DIST_PATH}/refs/heads/fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}" ]]; then
+  NEW_REPO=1
+fi
 rpm-ostree compose tree --repo="${DIST_PATH}" "${DIR}/custom-desktop.yaml" --unified-core
 echo "Composed Fedora tree" >&2
 if [[ -z "${NEW_REPO}" ]]; then
