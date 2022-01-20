@@ -44,28 +44,21 @@ packages:
   - gimp
   # - xrdp
   # - xorgxrdp
-  - golang
   - opendoas
   - kmail
-  # - godot
   - htop
   - java-11-openjdk
   - java-latest-openjdk
   - kde-connect
   - keepassxc
-  # - lshw
   - lsof
-  # - screenfetch
-  # - neofetch
   - meld
   - nextcloud-client
   - picocom
   - nmap
   - p7zip
-  # - progress
-  # - pulseeffects
-  # - pv
-  # - sl
+  - easyeffects
+  - sl
   - units
   - wol
   - yakuake
@@ -73,7 +66,6 @@ packages:
   # Games
   # - 0ad
   # - cataclysm-dda
-  # - cataclysm-dda-tiles
   # - desmume
   # - dolphin-emu
   # - dosbox
@@ -94,29 +86,21 @@ packages:
   # - widelands
   # - xonotic
   # Convenient hooks for Podman/Docker
-  # - oci-kvm-hook
-  # - oci-umount
+  - oci-kvm-hook
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
   - freeipa-client
-  # Docker compose alternative
-  # - podman-compose
   # Automatic decryption on boot
   - clevis-dracut
   # libvirt
-  # - ansible
   # - ivshmem-tools
-  # - vagrant
   - virtio-win
   - virt-install
   - virt-top
   - virt-manager
   - libvirt
   - libvirt-daemon-kvm
-  - qemu-kvm
-  # - qemu-system-ppc
-  # - qemu-system-riscv
   - qemu-user-static
   - edk2-ovmf
   - libguestfs-tools
@@ -136,11 +120,9 @@ packages-aarch64:
   - chromium
   - obs-studio
   - v4l2loopback
-  - qemu-system-aarch64
   - edk2-aarch64
 packages-armhfp:
   - chromium
-  - qemu-system-arm
   - edk2-arm
 packages-x86_64:
   - chromium-freeworld
@@ -151,7 +133,6 @@ packages-x86_64:
   # - pioneer
   # - steam
   # - warsow
-  - qemu-system-x86
   # - zfs
   # GPU support
   - rocm-smi
