@@ -85,6 +85,8 @@ packages:
   # - wesnoth
   # - widelands
   # - xonotic
+  - joystickwake
+  - libcamera-tools
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
   # Realm integration
@@ -93,6 +95,7 @@ packages:
   - freeipa-client
   # Automatic decryption on boot
   - clevis-dracut
+  - glusterfs-dracut
   # libvirt
   # - ivshmem-tools
   - virtio-win
@@ -133,7 +136,6 @@ packages-x86_64:
   # - pioneer
   # - steam
   # - warsow
-  # - zfs
   # GPU support
   - rocm-smi
   - rocminfo
@@ -155,6 +157,8 @@ exclude-packages:
   - wine-dxvk
   - wine-dxvk-d3d9
   - wine-dxvk-dxgi
+  - zfs-dkms
+  - zfs-fuse
 
 add-files:
   [
