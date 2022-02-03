@@ -1,3 +1,3 @@
 # Fedora Silverblue Config
 
-This repo contains the custom Silverblue configuration.
+This repo contains my custom Silverblue configuration.
