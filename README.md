@@ -1,3 +1,3 @@
 # Fedora Silverblue Config
 
-This repo contains the custom Silverblue configuration for Get There.
+This repo contains the custom Silverblue configuration.
