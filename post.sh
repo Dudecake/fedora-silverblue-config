@@ -27,6 +27,10 @@ for x in /usr/sbin/glibc_post_upgrade.*; do
     fi
 done
 
+cat << EOF > /etc/NetworkManager/conf.d/wifi_backend.conf
+[device]
+wifi.backend=iwd
+EOF
 echo /opt/rocm-*/lib > /etc/ld.so.conf.d/$(uname -m)-rocm.conf
 sed -i 's/#AutomaticUpdatePolicy=.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
 ln -s $(cd /var/opt && echo rocm-*) /var/opt/rocm
