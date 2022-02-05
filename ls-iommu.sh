@@ -1,6 +1,9 @@
-#!/bin/bash
-(for d in /sys/kernel/iommu_groups/*/devices/*; do
-  n=${d#*/iommu_groups/*}; n=${n%%/*}
-  printf 'IOMMU Group %s ' "$n"
-  lspci -nns "${d##*/}"
-done) | sort -t ' ' -k 3n
+#!/bin/sh
+
+for iommu_group in $(find /sys/kernel/iommu_groups/ -maxdepth 1 -mindepth 1 -type d | sort -n -t / -k 5); do
+    echo "IOMMU group $(basename "$iommu_group")"
+    for device in $(ls -1 "$iommu_group"/devices/); do
+        echo -n $'\t'
+        lspci -nns "$device"
+    done
+done

@@ -65,26 +65,24 @@ packages:
   - virglrenderer-test-server
   # Games
   # - 0ad
-  # - cataclysm-dda
-  # - desmume
-  # - dolphin-emu
-  # - dosbox
-  # - endless-sky
-  # - freeciv
+  - cataclysm-dda
+  - desmume
+  - dolphin-emu
+  - dosbox
+  - endless-sky
   - gamehub
   - gamemode
-  # - lutris
   - mangohud
   # - openclonk
-  # - openttd
-  # - orion
-  # - ppsspp-qt
-  # - ppsspp-sdl
-  # - scorched3d
-  # - visualboyadvance-m
-  # - wesnoth
-  # - widelands
-  # - xonotic
+  - openttd
+  - orion
+  - ppsspp-qt
+  - ppsspp-sdl
+  - scorched3d
+  - visualboyadvance-m
+  - wesnoth
+  - widelands
+  - xonotic
   - joystickwake
   - libcamera-tools
   # Convenient hooks for Podman/Docker
@@ -102,11 +100,12 @@ packages:
   - virt-install
   - virt-top
   - virt-manager
+  - virt-viewer
   - libvirt
   - libvirt-daemon-kvm
   - qemu-user-static
   - edk2-ovmf
-  - libguestfs-tools
+  - guestfs-tools
   - python3-libguestfs
   # Web browsers
   - falkon
@@ -133,14 +132,12 @@ packages-x86_64:
   - discord
   - obs-studio
   - v4l2loopback
-  # - pioneer
-  # - steam
-  # - warsow
+  - pioneer
+  - warsow
   # GPU support
   - rocm-smi
   - rocminfo
   - rocm-opencl
-  # - clinfo
   - radeontop
 
 # Make sure the following are not pulled in when Recommended by other packages
@@ -182,6 +179,5 @@ repos:
   - virtio-win-latest
   - ROCm
   - ckoomen
-  # - zfs
   - code
   # - gitlab.com_paulcarroty_vscodium_repo

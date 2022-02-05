@@ -1,1 +1,1 @@
-export PATH=/opt/rocm/bin:/opt/rocm/opencl/bin:${PATH}
+export PATH=/opt/rocm/opencl/bin:${PATH}
