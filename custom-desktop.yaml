@@ -30,10 +30,10 @@ packages:
   # - scim-fcitx
   # - zswap-cli
   # Utilities
+  - ksshaskpass
   - code
   - fdupes
   - gamescope
-  # - android-tools
   - bsdtar
   - micro
   - ncdu
@@ -86,6 +86,8 @@ packages:
   - xonotic
   - joystickwake
   - libcamera-tools
+  - android-tools
+  - waydroid
   # Convenient hooks for Podman/Docker
   - oci-kvm-hook
   # Realm integration
@@ -102,6 +104,7 @@ packages:
   - virt-top
   - virt-manager
   - virt-viewer
+  - vendor-reset-dkms
   - libvirt
   - libvirt-daemon-kvm
   - qemu-user-static
@@ -133,6 +136,7 @@ packages-x86_64:
   - discord
   - obs-studio
   - v4l2loopback
+  - heroic
   - pioneer
   - warsow
   # GPU support
