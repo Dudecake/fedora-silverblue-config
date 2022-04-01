@@ -22,9 +22,13 @@ packages:
   - kwrite
   - okular
   # Custom packages
+  - akregator
+  - kontact
   - arch-install-scripts
   - zsh
   - zsh-syntax-highlighting
+  - setroubleshoot
+  - setroubleshoot-server
   # - fcitx-kkc
   # - fcitx-qt5
   # - scim-fcitx
@@ -42,6 +46,7 @@ packages:
   - firewall-applet
   - freerdp
   - gimp
+  - pulseaudio-utils
   # - xrdp
   # - xorgxrdp
   - iwd
@@ -107,6 +112,8 @@ packages:
   - vendor-reset-dkms
   - libvirt
   - libvirt-daemon-kvm
+  - qemu-system-aarch64
+  - qemu-system-riscv
   - qemu-user-static
   - edk2-ovmf
   - guestfs-tools
@@ -177,7 +184,6 @@ units:
 repos:
   - fedora-35
   - fedora-35-updates
-  - fedora-35-updates-archive
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
