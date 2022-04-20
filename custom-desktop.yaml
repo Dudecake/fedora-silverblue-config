@@ -69,6 +69,7 @@ packages:
   - wol
   - yakuake
   - virglrenderer-test-server
+  - vulkan-tools
   # Games
   # - 0ad
   - cataclysm-dda
