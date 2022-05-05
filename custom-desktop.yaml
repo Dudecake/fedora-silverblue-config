@@ -56,6 +56,8 @@ packages:
   - java-11-openjdk
   - java-latest-openjdk
   - kde-connect
+  - krfb
+  - krdc
   - keepassxc
   - lsof
   - meld
