@@ -185,8 +185,8 @@ units:
   - libvirtd.socket
 
 repos:
-  - fedora-35
-  - fedora-35-updates
+  - fedora-36
+  - fedora-36-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
