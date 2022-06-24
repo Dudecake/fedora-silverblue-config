@@ -1,5 +1,5 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/35/${basearch}/ironblue
+ref: fedora/36/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -24,6 +24,8 @@ packages:
   # Custom packages
   - akregator
   - kontact
+  - kamoso
+  - krecorder
   - arch-install-scripts
   - zsh
   - zsh-syntax-highlighting
@@ -47,6 +49,7 @@ packages:
   - freerdp
   - gimp
   - pulseaudio-utils
+  - snapper
   # - xrdp
   # - xorgxrdp
   - iwd
@@ -55,6 +58,9 @@ packages:
   - htop
   - java-11-openjdk
   - java-latest-openjdk
+  - java-latest-openjdk-devel
+  - java-latest-openjdk-javadoc
+  - java-latest-openjdk-src
   - kde-connect
   - krfb
   - krdc
@@ -97,7 +103,7 @@ packages:
   - android-tools
   - waydroid
   # Convenient hooks for Podman/Docker
-  - oci-kvm-hook
+  # - oci-kvm-hook
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
@@ -121,6 +127,7 @@ packages:
   - edk2-ovmf
   - guestfs-tools
   - python3-libguestfs
+  - uboot-tools
   # Web browsers
   - falkon
   # Content
