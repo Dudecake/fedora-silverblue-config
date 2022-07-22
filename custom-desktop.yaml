@@ -38,6 +38,7 @@ packages:
   # Utilities
   - ksshaskpass
   - code
+  - cmake
   - fdupes
   - gamescope
   - bsdtar
@@ -57,6 +58,13 @@ packages:
   - kmail
   - htop
   - java-11-openjdk
+  - java-11-openjdk-devel
+  - java-11-openjdk-javadoc
+  - java-11-openjdk-src
+  - java-17-openjdk
+  - java-17-openjdk-devel
+  - java-17-openjdk-javadoc
+  - java-17-openjdk-src
   - java-latest-openjdk
   - java-latest-openjdk-devel
   - java-latest-openjdk-javadoc
@@ -102,6 +110,7 @@ packages:
   - libcamera-tools
   - android-tools
   - waydroid
+  - iperf3
   # Convenient hooks for Podman/Docker
   # - oci-kvm-hook
   # Realm integration
