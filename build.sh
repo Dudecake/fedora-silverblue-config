@@ -18,10 +18,10 @@ if [[ ! -d "${DIST_PATH}/tmp" ]]; then
   mkdir -p "${DIST_PATH}"
   ostree init --repo="${DIST_PATH}" --mode=archive
 fi
-if [[ -f "${DIST_PATH}/refs/heads/fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}" ]]; then
+if [[ ! -f "${DIST_PATH}/refs/heads/fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}" ]]; then
   NEW_REPO=1
 fi
-rpm-ostree compose tree --repo="${DIST_PATH}" "${DIR}/custom-desktop.yaml" --unified-core
+rpm-ostree compose tree --repo="${DIST_PATH}" "${DIR}/custom-desktop.yaml" --unified-core "$@"
 echo "Composed Fedora tree" >&2
 if [[ -z "${NEW_REPO}" ]]; then
     ostree --repo="${DIST_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}

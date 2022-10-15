@@ -1,0 +1,6 @@
+[ms-teams]
+name=Microsoft Teams RPM repo
+baseurl=https://packages.microsoft.com/yumrepos/ms-teams
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc

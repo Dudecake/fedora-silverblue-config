@@ -136,6 +136,7 @@ packages:
   - edk2-ovmf
   - guestfs-tools
   - python3-libguestfs
+  - driverctl
   - uboot-tools
   # Web browsers
   - falkon
@@ -152,6 +153,9 @@ packages-aarch64:
   - chromium
   - obs-studio
   - v4l2loopback
+  - cloud-hypervisor
+  - rust-hypervisor-firmware-bin
+  - edk2-cloud-hypervisor
   - edk2-aarch64
 packages-armhfp:
   - chromium
@@ -160,8 +164,12 @@ packages-x86_64:
   - chromium-freeworld
   # - codium
   - discord
+  - teams
   - obs-studio
   - v4l2loopback
+  - cloud-hypervisor
+  - rust-hypervisor-firmware-bin
+  - edk2-cloud-hypervisor
   - heroic
   - pioneer
   - warsow
@@ -211,4 +219,6 @@ repos:
   - ROCm
   - ckoomen
   - code
+  - ms-teams
+  - home_cloud-hypervisor
   # - gitlab.com_paulcarroty_vscodium_repo

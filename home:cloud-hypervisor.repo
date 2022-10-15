@@ -1,0 +1,7 @@
+[home_cloud-hypervisor]
+name=Cloud Hypervisor (Fedora_35)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_35/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_35/repodata/repomd.xml.key
+enabled=1
