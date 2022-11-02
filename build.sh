@@ -9,6 +9,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 KEY=${KEY:-920498D5E1E4D38C258A1AE623FE6D6C9114BC76}
 DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
+CACHE_PATH=${CACHE_PATH:-/var/cache/rpm-ostree/${DIST_NAME}}
 MACHINE="$(uname -m)"
 FEDORA_VERSION=36
 
@@ -21,7 +22,7 @@ fi
 if [[ ! -f "${DIST_PATH}/refs/heads/fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}" ]]; then
   NEW_REPO=1
 fi
-rpm-ostree compose tree --repo="${DIST_PATH}" "${DIR}/custom-desktop.yaml" --unified-core --cachedir="${DIST_PATH}/tmp/cache" "$@"
+rpm-ostree compose tree --repo="${DIST_PATH}" --cachedir="${CACHE_PATH}" "${DIR}/custom-desktop.yaml" --unified-core "$@"
 echo "Composed Fedora tree" >&2
 if [[ -z "${NEW_REPO}" ]]; then
     ostree --repo="${DIST_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
