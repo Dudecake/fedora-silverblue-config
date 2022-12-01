@@ -1,5 +1,5 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/36/${basearch}/ironblue
+ref: fedora/37/${basearch}/ironblue
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -27,6 +27,7 @@ packages:
   - kamoso
   - krecorder
   - arch-install-scripts
+  - dnf
   - zsh
   - zsh-syntax-highlighting
   - setroubleshoot
@@ -93,7 +94,6 @@ packages:
   - mangohud
   # - openclonk
   - openttd
-  - orion
   - ppsspp-qt
   - ppsspp-sdl
   - scorched3d
@@ -204,8 +204,8 @@ units:
   - libvirtd.socket
 
 repos:
-  - fedora-36
-  - fedora-36-updates
+  - fedora-37
+  - fedora-37-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree

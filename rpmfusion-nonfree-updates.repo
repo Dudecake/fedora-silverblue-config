@@ -1,7 +1,7 @@
 [rpmfusion-nonfree-updates]
-name=RPM Fusion for Fedora 36 - Nonfree - Updates
-#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/36/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-36&arch=$basearch
+name=RPM Fusion for Fedora 37 - Nonfree - Updates
+#baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/37/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-37&arch=$basearch
 enabled=1
 enabled_metadata=1
 type=rpm-md

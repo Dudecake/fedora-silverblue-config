@@ -9,9 +9,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" > /dev/null && pwd )"
 KEY=${KEY:-920498D5E1E4D38C258A1AE623FE6D6C9114BC76}
 DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
-CACHE_PATH=${CACHE_PATH:-/var/cache/rpm-ostree/${DIST_NAME}}
+CACHE_PATH=${CACHE_PATH:-/var/cache/rpm-ostree/fedora/${DIST_NAME}}
 MACHINE="$(uname -m)"
-FEDORA_VERSION=36
+FEDORA_VERSION=37
 
 set -e
 [[ ! -z ${DRYRUN} ]] && exit 0
