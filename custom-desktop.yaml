@@ -129,6 +129,7 @@ packages:
   - qemu-system-riscv
   - qemu-user-static
   - edk2-ovmf
+  - ipxe-bootimgs
   - guestfs-tools
   - python3-libguestfs
   - driverctl
@@ -147,11 +148,12 @@ packages:
 packages-aarch64:
   - chromium
   - obs-studio
-  - v4l2loopback
+  # - v4l2loopback
   - cloud-hypervisor
   - rust-hypervisor-firmware-bin
   - edk2-cloud-hypervisor
   - edk2-aarch64
+  - ipxe-bootimgs-x86
 packages-armhfp:
   - chromium
   - edk2-arm
@@ -161,7 +163,7 @@ packages-x86_64:
   - discord
   # - teams
   - obs-studio
-  - v4l2loopback
+  # - v4l2loopback
   - cloud-hypervisor
   - rust-hypervisor-firmware-bin
   - edk2-cloud-hypervisor
