@@ -1,7 +1,7 @@
 [home_cloud-hypervisor]
-name=Cloud Hypervisor (Fedora_$releasever)
+name=Cloud Hypervisor (Fedora_Rawhide)
 type=rpm-md
-baseurl=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_$releasever/
+baseurl=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_Rawhide/
 gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_$releasever/repodata/repomd.xml.key
+gpgkey=https://download.opensuse.org/repositories/home:/cloud-hypervisor/Fedora_Rawhide/repodata/repomd.xml.key
 enabled=1

@@ -11,10 +11,11 @@ DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
 CACHE_PATH=${CACHE_PATH:-/var/cache/rpm-ostree/fedora/${DIST_NAME}}
 MACHINE="$(uname -m)"
-FEDORA_VERSION=37
+FEDORA_VERSION=38
 
 set -e
 [[ ! -z ${DRYRUN} ]] && exit 0
+[[ ! -d "${CACHE_PATH}" ]] && mkdir -p "${CACHE_PATH}"
 if [[ ! -d "${DIST_PATH}/tmp" ]]; then
   mkdir -p "${DIST_PATH}"
   ostree init --repo="${DIST_PATH}" --mode=archive

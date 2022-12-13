@@ -1,8 +1,8 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/37/${basearch}/ironblue
-automatic_version_prefix: "37"
-mutate-os-release: "37"
-releasever: "37"
+ref: fedora/38/${basearch}/ironblue
+automatic_version_prefix: "38"
+mutate-os-release: "38"
+releasever: "38"
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -212,8 +212,8 @@ units:
   - libvirtd.socket
 
 repos:
-  - fedora-37
-  - fedora-37-updates
+  - fedora-38
+  - fedora-38-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
