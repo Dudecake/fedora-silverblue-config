@@ -204,6 +204,7 @@ add-files:
     ["ls-reset.sh", "/usr/bin/ls-reset.sh"],
     ["rocm.sh", "/etc/profile.d/rocm.sh"],
     ["rocm.repo", "/etc/yum.repos.d/rocm.repo"],
+    ["microsoft.asc", "/etc/pki/rpm-gpg/microsoft.asc"],
   ]
 
 units:
