@@ -1,5 +1,8 @@
 include: kde-desktop-pkgs.yaml
 ref: fedora/37/${basearch}/ironblue
+automatic_version_prefix: "37"
+mutate-os-release: "37"
+releasever: "37"
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -38,7 +41,6 @@ packages:
   # - zswap-cli
   # Utilities
   - ksshaskpass
-  - code
   - cmake
   # - gcc-c++
   # - autoconf
@@ -148,6 +150,7 @@ packages:
 packages-aarch64:
   - chromium
   - obs-studio
+  - code
   # - v4l2loopback
   - cloud-hypervisor
   - rust-hypervisor-firmware-bin
@@ -156,6 +159,7 @@ packages-aarch64:
   - ipxe-bootimgs-x86
 packages-armhfp:
   - chromium
+  - code
   - edk2-arm
 packages-x86_64:
   - chromium-freeworld
@@ -163,6 +167,7 @@ packages-x86_64:
   - discord
   # - teams
   - obs-studio
+  - code
   # - v4l2loopback
   - cloud-hypervisor
   - rust-hypervisor-firmware-bin

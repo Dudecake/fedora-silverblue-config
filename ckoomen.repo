@@ -1,6 +1,6 @@
 [ckoomen]
 name=CKoomen repo
-baseurl=http://repo.ckoomen.eu/fedora/37/$basearch/os/
+baseurl=http://repo.ckoomen.eu/fedora/$releasever/$basearch/os/
 enabled=1
 metadata_expire=1h
 gpgcheck=0
