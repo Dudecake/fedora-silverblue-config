@@ -1,1 +1,7 @@
-./workstation-ostree-config/fedora-38.repo
+[fedora-38]
+name=Fedora 38 $basearch
+mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=fedora-38&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://src.fedoraproject.org/rpms/fedora-repos/raw/rawhide/f/RPM-GPG-KEY-fedora-38-primary
+metadata_expire=1d
