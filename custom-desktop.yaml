@@ -24,6 +24,9 @@ packages:
   - kcalc
   - kwrite
   - okular
+  # Install some minor optional tools for KInfoCenter
+  - vulkan-tools
+  - xdpyinfo
   # Custom packages
   - akregator
   - kontact
@@ -188,6 +191,10 @@ exclude-packages:
   # Exclude currently broken support for rpm-ostree in Discover
   - plasma-discover-rpm-ostree
   - plasma-pk-updates
+  # Manually excluded as recommended by gtk3 (and likely gtk4 in the future)
+  # See https://pagure.io/fedora-kde/SIG/issue/124
+  - tracker
+  - tracker-miners
   - mesa-libOpenCL
   - pocl
   - wine
