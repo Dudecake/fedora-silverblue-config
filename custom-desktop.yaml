@@ -44,6 +44,8 @@ packages:
   - dnf
   - zsh
   - zsh-syntax-highlighting
+  - btop
+  - sbsigntools
   - setroubleshoot
   - setroubleshoot-server
   # - fcitx-kkc
@@ -155,6 +157,9 @@ packages:
   - kdenlive
   - blender
   - krita
+  # GPU support
+  - mesa-libOpenCL
+  - clinfo
   # Additional repositories
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
@@ -201,7 +206,7 @@ exclude-packages:
   # See https://pagure.io/fedora-kde/SIG/issue/124
   - tracker
   - tracker-miners
-  - mesa-libOpenCL
+  # Custom excludes
   - pocl
   - wine
   - wine-core

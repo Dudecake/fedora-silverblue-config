@@ -108,6 +108,7 @@ chmod 755 /usr/libexec/fedora-silverblue-readonly-sysroot
 # Enable the corresponding unit
 systemctl enable fedora-silverblue-readonly-sysroot.service
 
+# Custom commands
 cat << EOF > /etc/NetworkManager/conf.d/wifi_backend.conf
 [device]
 wifi.backend=iwd
@@ -121,4 +122,4 @@ echo /opt/rocm-*/hsa/lib >> /etc/ld.so.conf.d/$(uname -m)-rocm.conf
 sed -i 's/#AutomaticUpdatePolicy=.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf
 printf "%s\n" vfio vfio_iommu_type1 vfio_pci > /etc/modules-load.d/99-fedora-ironblue.conf
 # dkms install vendor-reset/$(ls -d /usr/src/vendor-reset-* | grep -Po '\d+\.\d+\.\d+') -k $(ls -1 /usr/lib/modules) --kernelsourcedir $(ls -d /usr/src/kernels/*)
-rpm --import /etc/pki/rpm-gpg/microsoft.asc
+# rpm --import /etc/pki/rpm-gpg/microsoft.asc
