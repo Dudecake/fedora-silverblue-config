@@ -27,6 +27,14 @@ packages:
   # Install some minor optional tools for KInfoCenter
   - vulkan-tools
   - xdpyinfo
+  # Includes a KIO & KCM (can not be Flatpak'ed), used by Dolphin and Gwenview
+  # See https://pagure.io/fedora-kde/SIG/issue/291
+  - kamera
+  # Make sure that previous Anaconda dependencies are kept in the image
+  # See: https://pagure.io/fedora-kde/SIG/issue/243
+  - bcache-tools
+  - dmraid
+  - mobile-broadband-provider-info
   # Custom packages
   - akregator
   - kontact
@@ -188,8 +196,6 @@ packages-x86_64:
 exclude-packages:
   - plasma-discover-offline-updates
   - plasma-discover-packagekit
-  # Exclude currently broken support for rpm-ostree in Discover
-  - plasma-discover-rpm-ostree
   - plasma-pk-updates
   # Manually excluded as recommended by gtk3 (and likely gtk4 in the future)
   # See https://pagure.io/fedora-kde/SIG/issue/124
