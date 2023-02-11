@@ -121,6 +121,8 @@ packages:
   - android-tools
   - waydroid
   - iperf3
+  - osbuild-composer
+  - composer-cli
   # Convenient hooks for Podman/Docker
   # - oci-kvm-hook
   # Realm integration
@@ -228,6 +230,7 @@ add-files:
 units:
   - rpm-ostreed-automatic.timer
   - libvirtd.socket
+  - osbuild-composer.socket
 
 repos:
   - fedora-38
