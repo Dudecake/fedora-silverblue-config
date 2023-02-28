@@ -42,6 +42,7 @@ packages:
   - krecorder
   - arch-install-scripts
   - dnf
+  - dnf5
   - zsh
   - zsh-syntax-highlighting
   - btop
