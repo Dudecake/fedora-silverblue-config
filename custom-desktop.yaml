@@ -1,8 +1,8 @@
 include: kde-desktop-pkgs.yaml
-ref: fedora/38/${basearch}/ironblue
-automatic_version_prefix: "38"
-mutate-os-release: "38"
-releasever: "38"
+ref: fedora/39/${basearch}/ironblue
+automatic_version_prefix: "39"
+mutate-os-release: "39"
+releasever: "39"
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
@@ -234,8 +234,8 @@ units:
   - osbuild-composer.socket
 
 repos:
-  - fedora-38
-  - fedora-38-updates
+  - fedora-39
+  # - fedora-39-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree

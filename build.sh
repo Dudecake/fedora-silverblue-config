@@ -11,7 +11,7 @@ DIST_NAME=ironblue
 DIST_PATH=${DIST_PATH:-/srv/http/ckoomen.eu/ostree/${DIST_NAME}}
 CACHE_PATH=${CACHE_PATH:-/var/cache/rpm-ostree/fedora/${DIST_NAME}}
 MACHINE="$(uname -m)"
-FEDORA_VERSION=38
+FEDORA_VERSION=39
 
 set -e
 [[ ! -z ${DRYRUN} ]] && exit 0
