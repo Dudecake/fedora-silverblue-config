@@ -26,7 +26,8 @@ fi
 rpm-ostree compose tree --repo="${DIST_PATH}" --cachedir="${CACHE_PATH}" "${DIR}/custom-desktop.yaml" --unified-core "$@"
 echo "Composed Fedora tree" >&2
 if [[ -z "${NEW_REPO}" ]]; then
-    ostree --repo="${DIST_PATH}" static-delta generate fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
+  ostree --repo="${DIST_PATH}" prune --only-branch fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME} --depth=5
+  ostree --repo="${DIST_PATH}" static-delta generate --if-not-exists fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME}
 fi
 # ostree --repo="${DIST_PATH}" gpg-sign fedora/${FEDORA_VERSION}/${MACHINE}/${DIST_NAME} ${KEY}
 ostree --repo="${DIST_PATH}" summary -u
