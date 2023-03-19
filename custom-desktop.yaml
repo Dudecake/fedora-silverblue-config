@@ -1,4 +1,4 @@
-include: kde-desktop-pkgs.yaml
+include: fedora-kinoite.yaml
 ref: fedora/39/${basearch}/ironblue
 automatic_version_prefix: "39"
 mutate-os-release: "39"
@@ -8,34 +8,6 @@ rojig:
   summary: "Fedora Ironblue base image"
   license: MIT
 packages:
-  - fedora-release-kinoite
-  # Wayland support
-  - kwayland-integration
-  - kwin-wayland
-  - plasma-workspace-wayland
-  - xorg-x11-server-Xwayland
-  # Portals for Flatpak
-  - xdg-desktop-portal-kde
-  # Provide an archive manager by default
-  - ark
-  # Keep some basic apps installed until we have Flatpaks available
-  # See https://pagure.io/fedora-kde/SIG/issue/13
-  - gwenview
-  - kcalc
-  - kwrite
-  - okular
-  # Install some minor optional tools for KInfoCenter
-  - vulkan-tools
-  - xdpyinfo
-  # Includes a KIO & KCM (can not be Flatpak'ed), used by Dolphin and Gwenview
-  # See https://pagure.io/fedora-kde/SIG/issue/291
-  - kamera
-  # Make sure that previous Anaconda dependencies are kept in the image
-  # See: https://pagure.io/fedora-kde/SIG/issue/243
-  - bcache-tools
-  - dmraid
-  - mobile-broadband-provider-info
-  # Custom packages
   - akregator
   - kontact
   - kamoso
@@ -202,14 +174,6 @@ packages-x86_64:
 
 # Make sure the following are not pulled in when Recommended by other packages
 exclude-packages:
-  - plasma-discover-offline-updates
-  - plasma-discover-packagekit
-  - plasma-pk-updates
-  # Manually excluded as recommended by gtk3 (and likely gtk4 in the future)
-  # See https://pagure.io/fedora-kde/SIG/issue/124
-  - tracker
-  - tracker-miners
-  # Custom excludes
   - pocl
   - wine
   - wine-core
@@ -234,8 +198,6 @@ units:
   - osbuild-composer.socket
 
 repos:
-  - fedora-39
-  # - fedora-39-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
