@@ -21,17 +21,9 @@ packages:
   - sbsigntools
   - setroubleshoot
   - setroubleshoot-server
-  # - fcitx-kkc
-  # - fcitx-qt5
-  # - scim-fcitx
-  # - zswap-cli
   # Utilities
   - ksshaskpass
   - cmake
-  # - gcc-c++
-  # - autoconf
-  # - autoconf-archive
-  # - automake
   - fdupes
   - gamescope
   - bsdtar
@@ -43,11 +35,8 @@ packages:
   - freerdp
   - gimp
   - snapper
-  # - xrdp
-  # - xorgxrdp
   - iwd
   - opendoas
-  - kmail
   - java-17-openjdk
   - java-17-openjdk-devel
   - java-17-openjdk-javadoc
@@ -96,15 +85,12 @@ packages:
   - iperf3
   - osbuild-composer
   - composer-cli
-  # Convenient hooks for Podman/Docker
-  # - oci-kvm-hook
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
   - freeipa-client
   # Automatic decryption on boot
   - clevis-dracut
-  - glusterfs-dracut
   # libvirt
   # - ivshmem-tools
   - virtio-win
