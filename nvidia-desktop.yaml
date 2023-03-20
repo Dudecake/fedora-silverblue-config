@@ -1,39 +1,26 @@
-include: kde-desktop-pkgs.yaml
-ref: fedora/35/${basearch}/ironblue
+include: fedora-kinoite.yaml
+ref: fedora/38/${basearch}/ironblue
+automatic_version_prefix: "38"
+mutate-os-release: "38"
+releasever: "38"
 rojig:
   name: fedora-ironblue
   summary: "Fedora Ironblue base image"
   license: MIT
 packages:
-  - fedora-release-kinoite
-  # Wayland support
-  - kwayland-integration
-  - kwin-wayland
-  - plasma-workspace-wayland
-  - xorg-x11-server-Xwayland
-  # Portals for Flatpak
-  - xdg-desktop-portal-kde
-  # GNOME portal required for settings support in some GNOME Apps
-  # See https://pagure.io/fedora-kde/SIG/issue/120
-  - xdg-desktop-portal-gnome
-  # Provide an archive manager by default
-  - ark
-  # Keep some basic apps installed until we have Flatpaks available
-  # See https://pagure.io/fedora-kde/SIG/issue/13
-  - gwenview
-  - kcalc
-  - kwrite
-  - okular
-  # Custom packages
   - arch-install-scripts
-  - bashtop
+  - dnf
+  - dnf5
   - zsh
   - zsh-syntax-highlighting
+  - btop
   - zswap-cli
   # Utilities
   - bsdtar
   - nano
   - micro
+  - setroubleshoot
+  - setroubleshoot-server
   - ncdu
   - firejail
   - firewall-applet
@@ -42,18 +29,15 @@ packages:
   - java-11-openjdk
   - java-latest-openjdk
   - keepassxc
-  - kmail
   - lsof
   - meld
   - nmap
+  - snapper
   - sl
   - units
   - yakuake
   # Web browsers
   - falkon
-  # Convenient hooks for Podman/Docker
-  - oci-kvm-hook
-  - oci-umount
   # Realm integration
   - oddjob
   - oddjob-mkhomedir
@@ -65,8 +49,6 @@ packages:
   # Additional repositories for NVIDIA drivers, etc.
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
-packages-aarch64:
-  - chromium
 packages-x86_64:
   - chromium-freeworld
   # NVIDIA drivers
@@ -89,9 +71,9 @@ units:
   - podman.socket
 
 repos:
-  - fedora-35
-  - fedora-35-updates
   - rpmfusion-free
   - rpmfusion-free-updates
   - rpmfusion-nonfree
   - rpmfusion-nonfree-updates
+  - virtio-win-latest
+  - code
