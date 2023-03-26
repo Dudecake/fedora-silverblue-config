@@ -24,6 +24,7 @@ packages:
   # Utilities
   - ksshaskpass
   - cmake
+  - flatpak-builder
   - fdupes
   - gamescope
   - bsdtar
