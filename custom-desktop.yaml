@@ -9,7 +9,6 @@ rojig:
   license: MIT
 packages:
   - akregator
-  - kontact
   - kamoso
   - krecorder
   - arch-install-scripts
@@ -36,7 +35,10 @@ packages:
   - freerdp
   - gimp
   - snapper
-  - iwd
+  - ckoomen-config
+  - ckoomen-config-dracut
+  - ckoomen-config-zsh
+  - ckoomen-config-network-wifi
   - opendoas
   - java-17-openjdk
   - java-17-openjdk-devel
@@ -99,6 +101,7 @@ packages:
   - virt-top
   - virt-manager
   - virt-viewer
+  - kubernetes-client
   # - vendor-reset-dkms
   - libvirt
   - libvirt-daemon-kvm
