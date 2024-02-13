@@ -9,7 +9,6 @@ rojig:
   license: MIT
 packages:
   - akregator
-  - kontact
   - kamoso
   - krecorder
   - arch-install-scripts
@@ -36,12 +35,11 @@ packages:
   - freerdp
   - gimp
   - snapper
-  - iwd
+  - ckoomen-config
+  - ckoomen-config-dracut
+  - ckoomen-config-zsh
+  - ckoomen-config-network-wifi
   - opendoas
-  - java-17-openjdk
-  - java-17-openjdk-devel
-  - java-17-openjdk-javadoc
-  - java-17-openjdk-src
   - java-latest-openjdk
   - java-latest-openjdk-devel
   - java-latest-openjdk-javadoc
@@ -99,6 +97,7 @@ packages:
   - virt-top
   - virt-manager
   - virt-viewer
+  - kubernetes-client
   # - vendor-reset-dkms
   - libvirt
   - libvirt-daemon-kvm
@@ -113,6 +112,7 @@ packages:
   - uboot-tools
   # Web browsers
   - falkon
+  - chromium
   # Content
   - ffmpeg
   - celluloid
@@ -126,7 +126,6 @@ packages:
   - rpmfusion-free-release
   - rpmfusion-nonfree-release
 packages-aarch64:
-  - chromium
   - obs-studio
   - code
   # - v4l2loopback
@@ -136,11 +135,9 @@ packages-aarch64:
   - edk2-aarch64
   - ipxe-bootimgs-x86
 packages-armhfp:
-  - chromium
   - code
   - edk2-arm
 packages-x86_64:
-  - chromium-freeworld
   # - codium
   - discord
   # - teams
